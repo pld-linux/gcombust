@@ -13,7 +13,8 @@ Source0:	http://www.abo.fi/~jmunsin/gcombust/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-home_etc.patch
-Patch1:		%{name}-locale_names.patch
+Patch1:		%{name}-po.patch
+Patch2:		%{name}-locale_names.patch
 Icon:		gcombust.xpm
 URL:		http://www.iki.fi/jmunsin/gcombust/
 BuildRequires:	autoconf
@@ -53,6 +54,7 @@ gcombust - це GUI для mkisofs та cdrecord. В╕н написаний на C та
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 mv -f po/{no,nb}.po
 install %{SOURCE1} .
