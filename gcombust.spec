@@ -7,8 +7,12 @@ Group:		Applications/Archiving
 URL:		http://www.iki.fi/jmunsin/gcombust
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
 Source:		%{name}-%{version}.tar.gz
+Patch:		gcombust-opt.patch
 Requires:	gtk+ >= 1.2.0, cdrecord, mkisofs, cdlabelgen >= 1.1.3
 BuildRoot:	/tmp/%{name}-%{version}
+
+%define		_prefix		/usr/X11R6
+%define		_mandir		/usr/X11R6/man
 
 %description
 gcombust is a gui for mkisofs and cdrecord Linux. It's written
@@ -20,9 +24,10 @@ the code isn't written.
 
 %prep
 %setup -q
-%configure
+%patch -p0
 
 %build
+%configure
 make
 
 %install
