@@ -2,7 +2,7 @@ Summary:	gcombust is a GTK+ frontend for mksisofs and cdrecord
 Summary(pl):	gcombust jest nak³±dk± na mksisofs and cdrecord nzpisan± z u¿yciem Gtk+
 Name:		gcombust
 Version:	0.1.45
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
@@ -10,6 +10,7 @@ Group(pl):	X11/Aplikacje
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
 Source0:	http://www.abo.fi/~jmunsin/gcombust/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+Source2:	%{name}.png
 Patch1:		%{name}-home_etc.patch
 Icon:		gcombust.xpm
 URL:		http://www.iki.fi/jmunsin/gcombust/
@@ -62,6 +63,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	Applicationsdir=%{_applnkdir}/Utilities/CD-RW
 
+%{__install} %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+
 gzip -9nf AUTHORS ChangeLog NEWS README* THANKS
 
 %find_lang gcombust
@@ -74,4 +77,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/gcombust
 %{_applnkdir}/Utilities/CD-RW/gcombust.desktop
-%{_pixmapsdir}/gcombust.xpm
+%{_pixmapsdir}/gcombust.png
