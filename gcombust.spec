@@ -17,7 +17,7 @@ BuildRequires:	gtk+-devel >= 1.2.0
 Requires:	cdrecord
 Requires:	mkisofs
 Requires:	cdlabelgen >= 1.1.3
-BuildRoot:	/tmp/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
