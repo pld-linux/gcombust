@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=gcombust
+Type=Application
+Comment=GTK+ frontend for cdrecord
+Comment[pl]=Frontend GTK+ dla cdrecord
+Exec=gcombust
+Terminal=0
