@@ -2,29 +2,30 @@ Summary:	gcombust is a GTK+ frontend for mksisofs and cdrecord.
 Name:		gcombust
 Version:	0.1.25
 Release:	1
-Copyright:	GPL
+License:	GPL
 Group:		Applications/Archiving
 URL:		http://www.iki.fi/jmunsin/gcombust
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
 Source:		%{name}-%{version}.tar.gz
-Patch:		gcombust-opt.patch
+Patch0:		gcombust-opt.patch
+Patch1:		gcombust-home_etc.patch
 Requires:	gtk+ >= 1.2.0, cdrecord, mkisofs, cdlabelgen >= 1.1.3
-BuildRoot:	/tmp/%{name}-%{version}
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		/usr/X11R6/man
 
 %description
-gcombust is a gui for mkisofs and cdrecord Linux. It's written
-in C and it uses the GTK+ widget set (currently it's been tested
-and used only on Linux and X-Windows). gcombust is work in progress,
-the current (development) release is to be considered beta software.
-That means it hasn't been tested very well and that some parts of
-the code isn't written.
+gcombust is a gui for mkisofs and cdrecord Linux. It's written in C and it 
+uses the GTK+ widget set (currently it's been tested and used only on Linux 
+and X-Windows). gcombust is work in progress, the current (development) 
+release is to be considered beta software. That means it hasn't been tested 
+very well and that some parts of the code isn't written.   
 
 %prep
 %setup -q
-%patch -p0
+%patch0 -p0
+%patch1 -p1
 
 %build
 %configure
