@@ -7,4 +7,5 @@ Exec=gcombust
 Icon=gcombust.png
 Terminal=false
 Encoding=UTF-8
+Categories=GTK;Utility;DiscBurning;
 # vi: encoding=utf-8
