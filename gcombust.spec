@@ -9,6 +9,7 @@ License:	GPL
 Group:		X11/Applications
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
 Source0:	http://www.abo.fi/~jmunsin/gcombust/%{name}-%{version}.tar.gz
+# Source0-md5:	2c2455f8fe91cddd7b87bf59916a39e8
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch1:		%{name}-home_etc.patch
