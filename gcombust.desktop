@@ -6,4 +6,5 @@ Comment[pl]=Nakładka na mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
 Exec=gcombust
 Icon=gcombust.png
 Terminal=0
+Encoding=UTF-8
 # vi: encoding=utf-8
