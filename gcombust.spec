@@ -23,8 +23,6 @@ Requires:	cdrtools-mkisofs >= 1.10
 Requires:	cdlabelgen >= 1.1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 gcombust is a gui for mkisofs and cdrecord Linux. It's written in C
