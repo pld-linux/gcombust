@@ -1,6 +1,6 @@
 Summary:	gcombust is a GTK+ frontend for mksisofs and cdrecord
 Name:		gcombust
-Version:	0.1.33
+Version:	0.1.35
 Release:	1
 License:	GPL
 Group:		X11/Utilities
@@ -8,7 +8,6 @@ Group(pl):	X11/Narzêdzia
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
 Source0:	http://www.abo.fi/~jmunsin/gcombust/%{name}-%{version}.tar.gz
 Source1:	gcombust.desktop
-Patch0:		gcombust-opt.patch
 Patch1:		gcombust-home_etc.patch
 Icon:		gcombust.xpm
 URL:		http://www.iki.fi/jmunsin/gcombust/
@@ -40,7 +39,6 @@ fragmentów kodu.
 
 %prep
 %setup -q
-%patch0 -p0
 %patch1 -p1
 
 %build
