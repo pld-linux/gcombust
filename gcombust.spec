@@ -3,12 +3,13 @@ Name:		gcombust
 Version:	0.1.35
 Release:	1
 License:	GPL
-Group:		X11/Utilities
-Group(pl):	X11/Narzêdzia
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(pl):	X11/Aplikacje
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
 Source0:	http://www.abo.fi/~jmunsin/gcombust/%{name}-%{version}.tar.gz
-Source1:	gcombust.desktop
-Patch1:		gcombust-home_etc.patch
+Source1:	%{name}.desktop
+Patch1:		%{name}-home_etc.patch
 Icon:		gcombust.xpm
 URL:		http://www.iki.fi/jmunsin/gcombust/
 BuildRequires:	gettext-devel
@@ -43,7 +44,6 @@ fragmentów kodu.
 
 %build
 gettextize --copy --force
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
