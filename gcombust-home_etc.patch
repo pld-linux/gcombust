@@ -1,0 +1,73 @@
+diff -Nur gcombust-0.1.25/src/config_files.c gcombust-0.1.25-modified/src/config_files.c
+--- gcombust-0.1.25/src/config_files.c	Thu Sep 23 18:53:23 1999
++++ gcombust-0.1.25-modified/src/config_files.c	Wed Dec 15 10:17:46 1999
+@@ -40,7 +40,7 @@
+ /* I expect to need to write to several config files, might as well use
+  * a whole dir for gcombust */
+ 
+-#define GCOMBUST_CONFIG_DIR ".gcombust"
++#define GCOMBUST_CONFIG_DIR "gcombust"
+ #define GCOMBUST_CONFIG_FILE_NAME "gcombustrc"
+ 
+ static void read_env(void) {
+@@ -96,23 +96,29 @@
+ 	}
+ }
+ 
+-static char *get_config_dir(void) {
++static char *get_config_dir(int i) {
+ 	char *config_dir, *config;
+ 
+ 	if (NULL == (config_dir = getenv("HOME")))
+ 		config_dir = ".";
+ 
+ 	config = string_append(config_dir, NULL);
+-	config = string_append(config, "/");
++	if (i==0)
++		  config = string_append(config, "/.");
++	else {
++		  config = string_append(config, "/etc");
++		  mkdir (config, 0700);
++		  config = string_append(config, "/");
++	}
+ 	config = string_append(config, GCOMBUST_CONFIG_DIR);
+ 
+ 	return config;
+ }
+ 
+-static char *get_config_file(void) {
++static char *get_config_file(int i) {
+ 	char *config;
+ 
+-	config = get_config_dir();
++	config = get_config_dir(i);
+ 	config = string_append(config, "/");
+ 	config = string_append(config, GCOMBUST_CONFIG_FILE_NAME);
+ 
+@@ -264,8 +270,10 @@
+ 	if (NULL == cdda2wav_path)
+ 		cdda2wav_path = which("cdda2wav");
+ 
+-	config = get_config_file();
+-
++	config = get_config_file(1);
++	if (NULL == (fp = fopen(config, "r"))) {
++		config = get_config_file(0);
++	}
+ 	if (NULL == (fp = fopen(config, "r"))) {
+ 		alert_user_of_error(_(" Could not open config file.\n"
+ 					" Please configure gcombust in the File/Preferences menu \n"
+@@ -307,11 +315,11 @@
+ 	char *config;
+ 	int i;
+ 
+-	config = get_config_dir();
++	config = get_config_dir(1);
+ 	mkdir(config, S_IRWXU | S_IRWXG);
+ 	free(config);
+ 
+-	config = get_config_file();
++	config = get_config_file(1);
+ 	if (NULL == (fp = fopen(config, "w"))) {
+ 		alert_user_of_error(_(" Could not open config file for writing! \n"));
+ 		free(config);
