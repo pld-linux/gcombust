@@ -1,6 +1,7 @@
 Summary:	gcombust is a GTK+ frontend for mksisofs and cdrecord
+Summary(pl):	gcombust jest nak³±dk± na mksisofs and cdrecord nzpisan± z u¿yciem Gtk+
 Name:		gcombust
-Version:	0.1.39
+Version:	0.1.40
 Release:	1
 License:	GPL
 Group:		X11/Applications
@@ -42,6 +43,8 @@ fragmentów kodu.
 %setup -q
 %patch1 -p1
 
+install %{SOURCE1} .
+
 %build
 gettextize --copy --force
 %configure
@@ -49,12 +52,12 @@ gettextize --copy --force
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{,%{_datadir}/pixmaps,%{_applnkdir}/Utilities/CD-RW}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	Applicationsdir=%{_applnkdir}/Utilities/CD-RW
 
 install %{name}.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
 
 gzip -9nf AUTHORS ChangeLog NEWS README* THANKS
 
@@ -65,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f gcombust.lang
 %defattr(644,root,root,755)
-%doc {AUTHORS,ChangeLog,NEWS,README*,THANKS}.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/gcombust
 %{_applnkdir}/Utilities/CD-RW/gcombust.desktop
-%{_datadir}/pixmaps/gcombust.xpm
+%{_pixmapsdir}/gcombust.xpm
