@@ -1,7 +1,7 @@
 Summary:	gcombust is a GTK+ frontend for mksisofs and cdrecord.
 Name:		gcombust
 Version:	0.1.32
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Utilities
 Group(pl):	X11/Narzêdzia
@@ -51,12 +51,12 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{,%{_datadir}/pixmaps,%{_applnkdir}/Applications}
+install -d $RPM_BUILD_ROOT{,%{_datadir}/pixmaps,%{_applnkdir}/Utilities/CD-RW}
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
 install %{name}.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Applications/
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
 
 gzip -9nf AUTHORS ChangeLog NEWS README* THANKS
 
@@ -69,5 +69,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README*,THANKS}.gz
 %attr(755,root,root) %{_bindir}/gcombust
-%{_applnkdir}/Applications/gcombust.desktop
+%{_applnkdir}/Utilities/CD-RW/gcombust.desktop
 %{_datadir}/pixmaps/gcombust.xpm
