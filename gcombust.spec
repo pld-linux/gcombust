@@ -53,7 +53,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{,%{_datadir}/pixmaps,%{_applnkdir}/Utilities/CD-RW}
 
-make install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 install %{name}.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
