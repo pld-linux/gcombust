@@ -1,21 +1,13 @@
-%define	name	gcombust
-%define	version	0.1.12
-%define	release	1
-%define	serial	1
-
 Summary:	gcombust is a GTK+ frontend for mksisofs and cdrecord.
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Serial:		%{serial}
+Name:		gcombust
+Version:	0.1.25
+Release:	1
 Copyright:	GPL
-Group:		X11/Utilities
+Group:		Applications/Archiving
 URL:		http://www.iki.fi/jmunsin/gcombust
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
 Source:		%{name}-%{version}.tar.gz
-Distribution:	Freshmeat RPMs
 Requires:	gtk+ >= 1.2.0, cdrecord, mkisofs, cdlabelgen >= 1.1.3
-Packager:	Ryan Weaver <ryanw@infohwy.com>
 BuildRoot:	/tmp/%{name}-%{version}
 
 %description
@@ -28,21 +20,28 @@ the code isn't written.
 
 %prep
 %setup -q
-CFLAGS=$RPM_OPT_FLAGS \
-./configure --prefix=/usr
+%configure
 
 %build
 make
 
 %install
-if [ -e $RPM_BUILD_ROOT ]; then rm -rf $RPM_BUILD_ROOT; fi
-mkdir -p $RPM_BUILD_ROOT/usr/bin
-make prefix=$RPM_BUILD_ROOT/usr install-strip
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/pixmaps}
+
+make install-strip DESTDIR=$RPM_BUILD_ROOT
+
+install %{name}.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
+
+gzip -9nf AUTHORS ChangeLog NEWS README* THANKS
+
+%find_lang gcombust
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
-%defattr(-,root,root)
-%doc AUTHORS COPYING ChangeLog INSTALL NEWS README README.irix THANKS
-/usr/bin/gcombust
+%files -f gcombust.lang
+%defattr(644,root,root,755)
+%doc {AUTHORS,ChangeLog,NEWS,README*,THANKS}.gz
+%attr(755,root,root) %{_bindir}/gcombust
+%{_datadir}/pixmaps/gcombust.xpm
