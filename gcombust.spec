@@ -1,6 +1,6 @@
 Summary:	gcombust is a GTK+ frontend for mksisofs and cdrecord.
 Name:		gcombust
-Version:	0.1.31
+Version:	0.1.32
 Release:	2
 License:	GPL
 Group:		X11/Utilities/Archiving
