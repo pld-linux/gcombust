@@ -2,7 +2,8 @@
 Name=gcombust
 Type=Application
 Comment=A frontend for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
-Comment[pl]=Frontend na mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
+Comment[pl]=Nakładka na mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
 Exec=gcombust
 Icon=gcombust.png
 Terminal=0
+# vi: encoding=utf-8
