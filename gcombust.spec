@@ -57,8 +57,9 @@ gcombust - це GUI для mkisofs та cdrecord. В╕н написаний на C та
 install %{SOURCE1} .
 
 %build
+rm -f missing
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
