@@ -4,7 +4,7 @@ Summary(ru):	gcombust - это GTK+ интерфейс к mkisofs и cdrecord
 Summary(uk):	gcombust - це GTK+ ╕нтерфейс до mkisofs ╕ cdrecord
 Name:		gcombust
 Version:	0.1.52
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
@@ -12,7 +12,8 @@ Source0:	http://www.abo.fi/~jmunsin/gcombust/%{name}-%{version}.tar.gz
 # Source0-md5:	2c2455f8fe91cddd7b87bf59916a39e8
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-Patch1:		%{name}-home_etc.patch
+Patch0:		%{name}-home_etc.patch
+Patch1:		%{name}-locale_names.patch
 Icon:		gcombust.xpm
 URL:		http://www.iki.fi/jmunsin/gcombust/
 BuildRequires:	autoconf
@@ -50,8 +51,10 @@ gcombust - це GUI для mkisofs та cdrecord. В╕н написаний на C та
 
 %prep
 %setup -q
+%patch0 -p1
 %patch1 -p1
 
+mv -f po/{no,nb}.po
 install %{SOURCE1} .
 
 %build
