@@ -9,11 +9,27 @@
  "POT-Creation-Date: 2002-07-08 16:09+0300\n"
  "PO-Revision-Date: 2001-03-27:00+0200\n"
  "Last-Translator: Narancs v1 <narancs1@externet.hu>\n"
+@@ -25,7 +25,7 @@
+ #: src/audio.c:105 src/audio.c:191 src/audio.c:229 src/audio.c:248
+ #, c-format
+ msgid "Total size: %lu MB (/783) Sectors: %lu (/333000) Time: (%02d:%02d)"
+-msgstr "Teljes méret: %lu MB (/783) Szektorok: %lu (/333000)"
++msgstr "Teljes méret: %lu MB (/783) Szektorok: %lu (/333000) Idõ: (%02d:%02d)"
+ 
+ #: src/audio.c:165
+ msgid " as data track, it's a directory "
+@@ -102,7 +102,7 @@
+ 
+ #: src/audio.c:362
+ msgid "Total size: 0 MB (/783) Sectors: 150 (/333000) Time: (00:00)"
+-msgstr "Teljes méret: 0 MB (/783) Szektorok: 150 (/333000)"
++msgstr "Teljes méret: 0 MB (/783) Szektorok: 150 (/333000) Idõ: (00:00)"
+ 
+ #: src/cdlabel.c:369
+ msgid "cdlabelgen interface"
 --- gcombust-0.1.52/po/it.po~	Mon Jul 26 10:23:37 2004
 +++ gcombust-0.1.52/po/it.po	Mon Jul 26 10:23:37 2004
-@@ -1,18 +1,17 @@
--# SOME DESCRIPTIVE TITLE.
-+
+@@ -2,17 +2,16 @@
  # Copyright (C) YEAR Free Software Foundation, Inc.
  # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
  #
