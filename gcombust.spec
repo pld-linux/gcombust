@@ -1,15 +1,19 @@
 Summary:	gcombust is a GTK+ frontend for mksisofs and cdrecord.
 Name:		gcombust
 Version:	0.1.29
-Release:	1
+Release:	2
 License:	GPL
-Group:		Applications/Archiving
-URL:		http://www.iki.fi/jmunsin/gcombust
+Group:		Utilities/Archiving
+Group(pl):	Narzêdzia/Archiwizacja
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
-Source:		%{name}-%{version}.tar.gz
+Source:		http://www.abo.fi/~jmunsin/gcombust/%{name}-%{version}.tar.gz
 Patch0:		gcombust-opt.patch
 Patch1:		gcombust-home_etc.patch
-Requires:	gtk+ >= 1.2.0, cdrecord, mkisofs, cdlabelgen >= 1.1.3
+Icon:		gcombust.xpm
+URL:		http://www.iki.fi/jmunsin/gcombust/
+BuildRequires:	gettext-devel
+BuildRequires:	gtk+-devel >= 1.2.0
+Requires:	cdrecord, mkisofs, cdlabelgen >= 1.1.3
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
@@ -28,14 +32,16 @@ very well and that some parts of the code isn't written.
 %patch1 -p1
 
 %build
+gettextize --copy --force
+LDFLAGS="-s"; export LDFLAGS
 %configure
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/pixmaps}
+install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps
 
-make install-strip DESTDIR=$RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
 
 install %{name}.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
 
