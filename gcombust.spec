@@ -1,8 +1,8 @@
 Summary:	gcombust is a GTK+ frontend for mkisofs and cdrecord
 Summary(pl):	gcombust jest nak³adk± na mkisofs i cdrecord napisan± z u¿yciem Gtk+
 Name:		gcombust
-Version:	0.1.49
-Release:	3
+Version:	0.1.50
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
@@ -63,8 +63,6 @@ rm -rf $RPM_BUILD_ROOT
 
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
-gzip -9nf AUTHORS ChangeLog NEWS README* THANKS
-
 %find_lang gcombust
 
 %clean
@@ -72,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f gcombust.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README* THANKS
 %attr(755,root,root) %{_bindir}/gcombust
 %{_applnkdir}/Utilities/CD-RW/gcombust.desktop
 %{_pixmapsdir}/gcombust.png
