@@ -36,7 +36,7 @@ isn't written.
 
 %description -l pl
 Gcombust jest graficznym interfejsem dla linuksowych programów mkisofs
-i cdrecord. Zosta³ napisany w C i uzywa zbioru widgetów GTK+ (jak
+i cdrecord. Zosta³ napisany w C i u¿ywa zbioru widgetów GTK+ (jak
 dot±d zosta³ jedynie przetestowany na Linuksie i X Window). Gcombust
 to praca w toku (WIP), za¶ bie¿±ca wersja (rozwojowa) ma status beta.
 Oznacza to, ¿e nie zosta³a dobrze przetestowana i brakuje niektórych
