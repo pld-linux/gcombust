@@ -1,0 +1,22 @@
+--- gcombust-0.1.52/configure.in~	Mon Jul 26 10:08:52 2004
++++ gcombust-0.1.52/configure.in	Mon Jul 26 10:08:52 2004
+@@ -18,7 +18,7 @@
+ AM_INIT_AUTOMAKE(gcombust,0.1.52)
+ 
+ # added for 0.1.14
+-ALL_LINGUAS="sk sv es de ja no fr hu ko ru it da gl hr nl pl"
++ALL_LINGUAS="sk sv es de ja nb fr hu ko ru it da gl hr nl pl"
+ 
+ AC_PROG_CC
+ AC_AIX
+--- gcombust-0.1.52/configure~	Mon Jul 26 10:08:59 2004
++++ gcombust-0.1.52/configure	Mon Jul 26 10:08:59 2004
+@@ -795,7 +795,7 @@
+ 
+ 
+ # added for 0.1.14
+-ALL_LINGUAS="sk sv es de ja no fr hu ko ru it da gl hr nl pl"
++ALL_LINGUAS="sk sv es de ja nb fr hu ko ru it da gl hr nl pl"
+ 
+ # Extract the first word of "gcc", so it can be a program name with args.
+ set dummy gcc; ac_word=$2
