@@ -1,7 +1,7 @@
 Summary:	gcombust is a GTK+ frontend for mksisofs and cdrecord.
 Name:		gcombust
-Version:	0.1.29
-Release:	2
+Version:	0.1.30
+Release:	1
 License:	GPL
 Group:		Utilities/Archiving
 Group(pl):	Narzêdzia/Archiwizacja
@@ -13,7 +13,9 @@ Icon:		gcombust.xpm
 URL:		http://www.iki.fi/jmunsin/gcombust/
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2.0
-Requires:	cdrecord, mkisofs, cdlabelgen >= 1.1.3
+Requires:	cdrecord
+Requires:	mkisofs
+Requires:	cdlabelgen >= 1.1.3
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
