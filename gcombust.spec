@@ -50,7 +50,7 @@ install %{SOURCE1} .
 gettextize --copy --force
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 %configure
 %{__make}
 
