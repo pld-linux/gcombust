@@ -28,6 +28,13 @@ and X-Windows). gcombust is work in progress, the current (development)
 release is to be considered beta software. That means it hasn't been tested 
 very well and that some parts of the code isn't written.   
 
+%description -l pl
+Gcombust jest graficznym interfejsem dla linuksowych programów mkisofs i 
+cdrecord. Zosta³ napisany w C i uzywa zbioru widgetów GTK+ (jak dot±d zosta³
+jedynie przetestowany na Linuksie i X-Windows). Gcombust to praca w toku (WIP),
+za¶ bie¿±ca wersja (rozwojowa) ma status beta. Oznacza to, ¿e nie zosta³a
+dobrze przetestowana i brakuje niektórych fragmentów kodu.
+
 %prep
 %setup -q
 %patch0 -p0
