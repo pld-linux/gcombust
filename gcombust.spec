@@ -3,13 +3,13 @@ Summary(pl):	gcombust jest nak≥adk± na mkisofs i cdrecord napisan± z uøyciem Gtk
 Summary(ru):	gcombust - ‹‘œ GTK+ …Œ‘≈“∆≈ ” À mkisofs … cdrecord
 Summary(uk):	gcombust - √≈ GTK+ ¶Œ‘≈“∆≈ ” ƒœ mkisofs ¶ cdrecord
 Name:		gcombust
-Version:	0.1.52
-Release:	6
+Version:	0.1.55
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Vendor:		Jonas Munsin <jmunsin@iki.fi>
 Source0:	http://www.abo.fi/~jmunsin/gcombust/%{name}-%{version}.tar.gz
-# Source0-md5:	2c2455f8fe91cddd7b87bf59916a39e8
+# Source0-md5:	25ddecef7f8556f0fac82d9d4927e8eb
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-home_etc.patch
