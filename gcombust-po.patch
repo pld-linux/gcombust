@@ -1,0 +1,80 @@
+--- gcombust-0.1.52/po/hu.po~	Mon Jul 26 10:21:13 2004
++++ gcombust-0.1.52/po/hu.po	Mon Jul 26 10:21:13 2004
+@@ -5,7 +5,7 @@
+ # Revision: 2000-11-06
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: PACKAGE VERSION\n"
++"Project-Id-Version: Gcombust 0.1.x\n"
+ "POT-Creation-Date: 2002-07-08 16:09+0300\n"
+ "PO-Revision-Date: 2001-03-27:00+0200\n"
+ "Last-Translator: Narancs v1 <narancs1@externet.hu>\n"
+--- gcombust-0.1.52/po/it.po~	Mon Jul 26 10:23:37 2004
++++ gcombust-0.1.52/po/it.po	Mon Jul 26 10:23:37 2004
+@@ -1,18 +1,17 @@
+-# SOME DESCRIPTIVE TITLE.
++
+ # Copyright (C) YEAR Free Software Foundation, Inc.
+ # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+ #
+-#, fuzzy
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: PACKAGE VERSION\n"
++"Project-Id-Version: Gcombust 0.1.x\n"
+ "POT-Creation-Date: 2002-07-08 16:09+0300\n"
+-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
++"PO-Revision-Date: 2002-07-08 16:09+0300\n"
+ "Last-Translator: Simo Sorce <simo.sorce@tiscalinet.it>\n"
+ "Language-Team: Italian <LL@li.org>\n"
+ "MIME-Version: 1.0\n"
+-"Content-Type: text/plain; charset=CHARSET\n"
+-"Content-Transfer-Encoding: ENCODING\n"
++"Content-Type: text/plain; charset=ISO-8859-1\n"
++"Content-Transfer-Encoding: 8bit\n"
+ 
+ #: src/audio.c:79 src/audio.c:163
+ msgid " Cannot add "
+--- gcombust-0.1.52/po/no.po~	Mon Jul 26 10:21:00 2004
++++ gcombust-0.1.52/po/no.po	Mon Jul 26 10:21:00 2004
+@@ -2,14 +2,13 @@
+ # Copyright (C) YEAR Free Software Foundation, Inc.
+ # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+ #
+-#, fuzzy
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: PACKAGE VERSION\n"
++"Project-Id-Version: Gcombust 0.1.x\n"
+ "POT-Creation-Date: 2002-07-08 16:09+0300\n"
+ "PO-Revision-Date: 1999-09-12 17:28+0100\n"
+ "Last-Translator: Atle Strand <atle82@online.no>\n"
+-"Language-Team: LANGUAGE <LL@li.org>\n"
++"Language-Team: Norwegian (Bokmaal) <LL@li.org>\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=ISO-8859-1\n"
+ "Content-Transfer-Encoding: 8BIT\n"
+--- gcombust-0.1.52/po/sv.po~	Mon Jul 26 10:23:47 2004
++++ gcombust-0.1.52/po/sv.po	Mon Jul 26 10:23:47 2004
+@@ -2,17 +2,16 @@
+ # Copyright (C) YEAR Free Software Foundation, Inc.
+ # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+ #
+-#, fuzzy
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: PACKAGE VERSION\n"
++"Project-Id-Version: Gcombust 0.1.x\n"
+ "POT-Creation-Date: 2002-07-08 16:09+0300\n"
+ "PO-Revision-Date: 2000-01-06 23:30+0100\n"
+ "Last-Translator: Tommy Strand <gts@abc.se>\n"
+-"Language-Team: LANGUAGE <LL@li.org>\n"
++"Language-Team: Swedish <LL@li.org>\n"
+ "MIME-Version: 1.0\n"
+-"Content-Type: text/plain; charset=CHARSET\n"
+-"Content-Transfer-Encoding: ENCODING\n"
++"Content-Type: text/plain; charset=ISO-8859-1\n"
++"Content-Transfer-Encoding: 8bit\n"
+ 
+ #: src/audio.c:79 src/audio.c:163
+ msgid " Cannot add "
