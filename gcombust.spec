@@ -57,8 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	Applicationsdir=%{_applnkdir}/Utilities/CD-RW
 
-install %{name}.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
-
 gzip -9nf AUTHORS ChangeLog NEWS README* THANKS
 
 %find_lang gcombust
