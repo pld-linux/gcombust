@@ -24,11 +24,10 @@ Requires:	cdrtools-mkisofs >= 1.10
 Requires:	cdlabelgen >= 1.1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 gcombust is a gui for mkisofs and cdrecord Linux. It's written in C
 and it uses the GTK+ widget set (currently it's been tested and used
-only on Linux and X-Windows). gcombust is work in progress, the
+only on Linux and X Window). gcombust is work in progress, the
 current (development) release is to be considered beta software. That
 means it hasn't been tested very well and that some parts of the code
 isn't written.
@@ -36,7 +35,7 @@ isn't written.
 %description -l pl
 Gcombust jest graficznym interfejsem dla linuksowych programów mkisofs
 i cdrecord. Zosta³ napisany w C i uzywa zbioru widgetów GTK+ (jak
-dot±d zosta³ jedynie przetestowany na Linuksie i X-Windows). Gcombust
+dot±d zosta³ jedynie przetestowany na Linuksie i X Window). Gcombust
 to praca w toku (WIP), za¶ bie¿±ca wersja (rozwojowa) ma status beta.
 Oznacza to, ¿e nie zosta³a dobrze przetestowana i brakuje niektórych
 fragmentów kodu.
