@@ -15,7 +15,6 @@ Source2:	%{name}.png
 Patch0:		%{name}-home_etc.patch
 Patch1:		%{name}-po.patch
 Patch2:		%{name}-locale_names.patch
-Icon:		gcombust.xpm
 URL:		http://www.iki.fi/jmunsin/gcombust/
 BuildRequires:	autoconf
 BuildRequires:	automake
