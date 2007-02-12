@@ -1,7 +1,7 @@
 Summary:	gcombust is a GTK+ frontend for mkisofs and cdrecord
-Summary(pl):	gcombust jest nakЁadk╠ na mkisofs i cdrecord napisan╠ z u©yciem Gtk+
-Summary(ru):	gcombust - это GTK+ интерфейс к mkisofs и cdrecord
-Summary(uk):	gcombust - це GTK+ ╕нтерфейс до mkisofs ╕ cdrecord
+Summary(pl.UTF-8):   gcombust jest nakе┌adkд┘ na mkisofs i cdrecord napisanд┘ z uе╪yciem Gtk+
+Summary(ru.UTF-8):   gcombust - я█я┌п╬ GTK+ п╦п╫я┌п╣я─я└п╣п╧я│ п╨ mkisofs п╦ cdrecord
+Summary(uk.UTF-8):   gcombust - я├п╣ GTK+ я√п╫я┌п╣я─я└п╣п╧я│ п╢п╬ mkisofs я√ cdrecord
 Name:		gcombust
 Version:	0.1.55
 Release:	1
@@ -33,21 +33,21 @@ current (development) release is to be considered beta software. That
 means it hasn't been tested very well and that some parts of the code
 isn't written.
 
-%description -l pl
-Gcombust jest graficznym interfejsem dla linuksowych programСw mkisofs
-i cdrecord. ZostaЁ napisany w C i u©ywa zbioru widgetСw GTK+ (jak
-dot╠d zostaЁ jedynie przetestowany na Linuksie i X Window). Gcombust
-to praca w toku (WIP), za╤ bie©╠ca wersja (rozwojowa) ma status beta.
-Oznacza to, ©e nie zostaЁa dobrze przetestowana i brakuje niektСrych
-fragmentСw kodu.
+%description -l pl.UTF-8
+Gcombust jest graficznym interfejsem dla linuksowych programцЁw mkisofs
+i cdrecord. Zostaе┌ napisany w C i uе╪ywa zbioru widgetцЁw GTK+ (jak
+dotд┘d zostaе┌ jedynie przetestowany na Linuksie i X Window). Gcombust
+to praca w toku (WIP), zaе⌡ bieе╪д┘ca wersja (rozwojowa) ma status beta.
+Oznacza to, е╪e nie zostaе┌a dobrze przetestowana i brakuje niektцЁrych
+fragmentцЁw kodu.
 
-%description -l ru
-gcombust - это GUI для mkisofs и cdrecord. Он написан на C и
-использует набор виджетов GTK+.
+%description -l ru.UTF-8
+gcombust - я█я┌п╬ GUI п╢п╩я▐ mkisofs п╦ cdrecord. п·п╫ п╫п╟п©п╦я│п╟п╫ п╫п╟ C п╦
+п╦я│п©п╬п╩я▄п╥я┐п╣я┌ п╫п╟п╠п╬я─ п╡п╦п╢п╤п╣я┌п╬п╡ GTK+.
 
-%description -l uk
-gcombust - це GUI для mkisofs та cdrecord. В╕н написаний на C та
-використову╓ наб╕р в╕джет╕в GTK+.
+%description -l uk.UTF-8
+gcombust - я├п╣ GUI п╢п╩я▐ mkisofs я┌п╟ cdrecord. п▓я√п╫ п╫п╟п©п╦я│п╟п╫п╦п╧ п╫п╟ C я┌п╟
+п╡п╦п╨п╬я─п╦я│я┌п╬п╡я┐я■ п╫п╟п╠я√я─ п╡я√п╢п╤п╣я┌я√п╡ GTK+.
 
 %prep
 %setup -q
