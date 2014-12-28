@@ -18,7 +18,7 @@ Patch2:		%{name}-locale_names.patch
 URL:		http://www.iki.fi/jmunsin/gcombust/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+-devel >= 1.2.0
 Requires:	cdrecord
 Requires:	cdrtools-mkisofs >= 1.10
